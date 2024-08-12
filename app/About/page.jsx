@@ -13,9 +13,9 @@ export const metadata = {
 
 const CV = () => {
   const Buttons = [
-    { text: 'About', route: 'About', styles: 'selected' },
-    { text: 'Projects', route: 'Projects' },
-    { text: 'Learn', route: 'Learn' },
+    { Text: 'About', Route: 'About', StylesButton: 'Selected' },
+    { Text: 'Projects', Route: 'Projects' },
+    { Text: 'Learn', Route: 'Learn' },
   ]
 
   return (

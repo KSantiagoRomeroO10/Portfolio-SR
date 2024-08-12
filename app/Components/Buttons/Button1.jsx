@@ -1,17 +1,17 @@
 'use client'
 
-import './Button1.css'
+import Styles from './Button1.module.css'
 import { useRouter } from 'next/navigation'
 
-const Button1 = ({ text, route, styles = null }) => {
-  const router = useRouter()
+const Button1 = ({ Text, Route, StylesButton = null }) => {
+  const Router = useRouter()
 
   return (
     <p
-      className={`button1 ${styles === 'right' ? 'button1Right' : styles === 'left' ? 'button1Left' : styles === 'selected' ? 'button1Selected' : ''}`}
-      onClick={() => router.push(route)}
+      className={`${Styles.Button1} ${ StylesButton === 'Right' ? Styles.Button1Right : StylesButton === 'Left' ? Styles.Button1Left : StylesButton === 'Selected' ? Styles.Button1Selected : ''}`}
+      onClick={() => Router.push(Route)}
     >
-      {text}
+      {Text}
     </p>
   )
 }

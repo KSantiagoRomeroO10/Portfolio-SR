@@ -33,7 +33,7 @@ body{
 
 @font-face {
   font-family: 'Monaspace Krypton Regular';
-  src: url('../Assets/Fonts/MonaspaceKrypton-Regular.woff') format('woff');
+  src: url('./Assets/Fonts/MonaspaceKrypton-Regular.woff') format('woff');
 }
 
 h1, h2, h3, p{

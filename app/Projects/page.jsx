@@ -8,9 +8,9 @@ export const metadata = {
 const Projects = () => {
 
   const Buttons = [
-    { text: 'About', route: 'About' },
-    { text: 'Projects', route: 'Projects', styles: 'selected'  },
-    { text: 'Learn', route: 'Learn' },
+    { Text: 'About', Route: 'About' },
+    { Text: 'Projects', Route: 'Projects', StylesButton: 'Selected'  },
+    { Text: 'Learn', Route: 'Learn' },
   ]
 
   return(
@@ -18,9 +18,9 @@ const Projects = () => {
     <Navbar buttons={
       Buttons.map((button, index) => (
         <Button1 
-          text={button.text} 
-          route={button.route} 
-          styles={button.styles} 
+          Text={button.Text} 
+          Route={button.Route} 
+          StylesButton={button.StylesButton} 
           key={index}
         />
       ))

@@ -2,9 +2,9 @@
 
 import './Inputs.css'
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-const Inputs = ({ type, name, placeholder, value, nameLabel }) => {
+const Inputs = ({ Type, Name, placeholder, value, NameLabel }) => {
   const [valueInput, setValueInput] = useState(value || '');
 
   const handleChange = (event) => {
@@ -13,15 +13,15 @@ const Inputs = ({ type, name, placeholder, value, nameLabel }) => {
 
   return (
     <>
-      <label htmlFor={name ?? type}>
-        <p>{nameLabel ?? ''}</p>
+      <label htmlFor={Name ?? Type}>
+        <p>{NameLabel ?? ''}</p>
       </label>
       <input
-        type={type}
-        name={name ?? type}
+        type={Type}
+        name={Name ?? Type}
         placeholder={placeholder ?? ''}
-        id={name ?? type}
-        value={type === 'button' ? value : valueInput}
+        id={Name ?? Type}
+        value={Type === 'button' ? value : valueInput}
         onChange={handleChange}
       />
     </>

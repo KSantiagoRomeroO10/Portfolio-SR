@@ -8,11 +8,10 @@ export const metadata = {
 const Learn = () => {
 
   const Buttons = [
-    { text: 'About', route: 'About' },
-    { text: 'Projects', route: 'Projects' },
-    { text: 'Learn', route: 'Learn', styles: 'selected' },
-    { text: 'Login', route: 'Login', styles: 'right' },
-    { text: 'Singup', route: 'Singup', styles: 'left' }
+    { Text: 'About', Route: 'About' },
+    { Text: 'Projects', Route: 'Projects' },
+    { Text: 'Learn', Route: 'Learn', StylesButton: 'Selected' },
+    { Text: 'Login', Route: 'Login', StylesButton: 'Right' },
   ]
 
   return (
@@ -20,9 +19,9 @@ const Learn = () => {
     <Navbar buttons={
       Buttons.map((button, index) => (
         <Button1 
-          text={button.text} 
-          route={button.route} 
-          styles={button.styles} 
+          Text={button.Text} 
+          Route={button.Route} 
+          StylesButton={button.StylesButton} 
           key={index}
         />
       ))
