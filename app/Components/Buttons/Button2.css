@@ -1,0 +1,26 @@
+.preText{
+  max-width: 120px;
+}
+
+.button2{
+  float: left;
+  min-width: 70px;
+  text-align: center;
+  margin: 15px;
+  padding: 10px;
+  border: 1.5px solid var(--bg5);
+  border-radius: 5px;
+  animation: scalecenter 0.6s;
+}
+
+.button2:hover{
+  cursor: pointer;
+  background: var(--bg1);
+  border: 1.5px solid white;
+}
+
+@keyframes scalecenter{ 
+  0%{transform:scale(0.5)} 
+  100%{transform:scale(1)} 
+}
+

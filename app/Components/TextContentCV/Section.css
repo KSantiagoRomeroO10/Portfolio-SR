@@ -1,0 +1,34 @@
+h2{
+  text-align: center;
+}
+
+.tituloSections{
+  border-bottom: var(--border-bottom);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: var(--bg5);
+  cursor: pointer;
+}
+
+.page-button.active {
+  background-color: var(--bg2);
+}

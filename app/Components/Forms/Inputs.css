@@ -1,0 +1,25 @@
+/* @import '../../app/general.scss'; */
+
+input{
+  margin: 5px;
+  padding: 12px;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 250px;
+  color: black;
+}
+
+input[type="button"] {
+  background: var(--bg1);
+  color: white;
+  width: 180px;
+}
+
+input[type="button"]:hover {
+  cursor: pointer;
+  color: white;
+}
+
+label{
+  margin: 5px;
+}

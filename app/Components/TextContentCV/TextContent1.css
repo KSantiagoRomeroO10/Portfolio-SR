@@ -1,0 +1,32 @@
+.TextContent1{
+  background: var(--bg2);
+  padding: 40px;
+  border-radius: 5px;
+  grid-row: 1;
+  grid-column: 1/2;
+  text-align: center;
+}
+
+.imageMain{
+  width: 150px;
+  height: 150px;
+  background-color: var(--bg1);
+  border: var(--border-bottom);
+  margin: auto;
+  /* Imagen y sus configuraciones */
+  border-radius: 50%;
+  background-image: url('/astronauta.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bordeInferior{
+  border-color: var(--red);
+}
+
+@media (max-width: 800px) {
+  .TextContent1{
+    width: 75vw;
+    grid-column: 1/4;
+  }  
+}

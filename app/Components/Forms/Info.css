@@ -1,0 +1,13 @@
+.information{
+  background: var(--bg2);
+  padding: 25px;
+  background: var(--bg2);
+  max-width: 65%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center; 
+}
+
+.info{
+  grid-column: 1/3;
+}

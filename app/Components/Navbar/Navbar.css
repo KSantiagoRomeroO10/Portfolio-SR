@@ -1,0 +1,7 @@
+.navbar{
+  width: 100%;
+  background: var(--bg2);
+  display: flex;
+  justify-content: center;
+  border-bottom: var(--border-bottom);
+}

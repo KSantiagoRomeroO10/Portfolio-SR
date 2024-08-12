@@ -1,0 +1,21 @@
+.align{
+  margin: 15px;
+  display: grid;
+  gap: 15px;
+  grid-template-rows: auto;
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+
+@media (max-width: 650px) {
+  .adaptation{
+    width: 70vw;
+  }  
+}
+
+@media (max-width: 570px) {
+  .adaptation{
+    width: 65vw;
+  }  
+}

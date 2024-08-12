@@ -1,0 +1,15 @@
+/* @import '../../app/general.scss'; */
+
+h1{
+  text-align: center;
+}
+
+.form{
+  background: var(--bg2);
+  padding: 25px;
+  text-align: center;
+}
+
+.form label{
+  text-align: start;
+}

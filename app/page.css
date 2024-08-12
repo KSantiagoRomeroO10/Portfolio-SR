@@ -1,0 +1,45 @@
+body{
+  background: var(--bg1);
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50vw, 1fr));
+  align-items: center;
+}
+
+.h1, .h2, .h3{
+  transition: 0.5s;
+}
+
+.h2, .h3{
+  font-size: 50px;
+  color: var(--red);
+}
+
+.h1{
+  font-size: 50px;
+  color: white;
+}
+
+.hs{
+  width: 55%;
+  margin: auto;
+}
+
+.description{
+  margin: auto;
+}
+
+.description p{
+  width: 70%;
+  text-align: left;
+}
+
+.h1:hover, .h2:hover, .h3:hover{
+  margin-left: 15px;
+  transition: 0.2s;
+  cursor: pointer;
+}
