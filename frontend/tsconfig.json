@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/About/page.jsx", "app/About/InfoBasic.js", "app/About/Sections.js", "app/Components/Buttons/Button1.jsx", "app/Components/Buttons/Button2.jsx", "app/Components/TextContentCV/Index.jsx", "app/Components/TextContentCV/Section.jsx", "app/Components/TextContentCV/TextContent2.jsx", "app/Components/TextContentCV/TextContent1.jsx", "app/Components/Forms/Form.jsx", "app/Components/Forms/Inputs.jsx", "app/Components/Forms/Info.jsx"  ],
+, "app/About/page.jsx", "app/About/InfoBasic.js", "app/About/Sections.js", "app/Components/Buttons/Button1.jsx", "app/Components/Buttons/Button2.jsx", "app/Components/TextContentCV/Index.jsx", "app/Components/TextContentCV/Section.jsx", "app/Components/TextContentCV/TextContent2.jsx", "app/Components/TextContentCV/TextContent1.jsx", "app/Components/Forms/Form.jsx", "app/Components/Forms/Inputs.jsx", "app/Components/Forms/Info.jsx", "app/Learn/layout.jsx"  ],
   "exclude": [
     "node_modules"
   ]
