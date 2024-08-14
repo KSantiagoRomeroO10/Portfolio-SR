@@ -20,7 +20,7 @@ const CV = () => {
 
   return (
     <>
-      <Navbar buttons={Buttons.map((button, index) => (
+      <Navbar Buttons={Buttons.map((button, index) => (
         <Button1 key={index} {...button} />
       ))} />
       <Index Sections={Sections} InfoBasic={InfoBasic} />

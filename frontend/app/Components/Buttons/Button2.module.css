@@ -10,17 +10,11 @@
   padding: 10px;
   border: 1.5px solid var(--bg5);
   border-radius: 5px;
-  animation: Scalecenter 0.1s;
 }
 
 .Button2:hover{
   cursor: pointer;
   background: var(--bg1);
   border: 1.5px solid white;
-}
-
-@keyframes Scalecenter{ 
-  0%{transform:scale(0.5)} 
-  100%{transform:scale(1)} 
 }
 

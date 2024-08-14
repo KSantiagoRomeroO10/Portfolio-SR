@@ -1,9 +1,9 @@
 import Styles from './Navbar.module.css'
 
-const Navbar = ({ buttons }) => {
+const Navbar = ({ Buttons }) => {
   return (
     <nav className={Styles.Navbar}>
-      {buttons}
+      {Buttons}
     </nav>
   )
 }
