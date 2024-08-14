@@ -5,17 +5,11 @@
   padding: 10px;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  animation: Scalecenter 0.1s;
 }
 
 .Button1:hover{
   cursor: pointer;
   border-bottom: var(--border-bottom);
-}
-
-@keyframes scalecenter{ 
-  0%{transform:scale(0.5)} 
-  100%{transform:scale(1)} 
 }
 
 .Button1Right{

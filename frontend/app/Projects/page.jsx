@@ -15,7 +15,7 @@ const Projects = () => {
 
   return(
 
-    <Navbar buttons={
+    <Navbar Buttons={
       Buttons.map((button, index) => (
         <Button1 
           Text={button.Text} 
