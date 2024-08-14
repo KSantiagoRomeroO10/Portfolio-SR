@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Learn'
+  title: 'Profile'
 }
 
 export default function RootLayout({ children }) {

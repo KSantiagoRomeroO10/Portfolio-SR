@@ -15,9 +15,8 @@ const Learn = () => {
     { Text: 'Learn', Route: 'Learn', StylesButton: 'Selected' },
   ]
 
-  if(!User || Object.values(User).every(Value => !Value)){
-    Buttons.push({ Text: 'Login', Route: 'Login', StylesButton: 'Right' })
-  }
+  if(!User || Object.values(User).every(Value => !Value)) Buttons.push({ Text: 'Login', Route: 'Login', StylesButton: 'Right' })
+  else Buttons.push({ Text: `${User.Username}`, Route: 'Profile', StylesButton: 'Right' })
 
   return (
     <Navbar Buttons={
