@@ -1,26 +1,23 @@
-h2{
+.TituloSections{
+  border-bottom: var(--border-bottom);
   text-align: center;
 }
 
-.tituloSections{
-  border-bottom: var(--border-bottom);
-}
-
-.page {
+.Page {
   display: none;
 }
 
-.page.active {
+.Page.Active {
   display: block;
 }
 
-.pagination {
+.Pagination {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-.page-button {
+.PageButton {
   margin: 5px;
   padding: 5px 10px;
   border: 1px solid white;
@@ -29,6 +26,6 @@ h2{
   cursor: pointer;
 }
 
-.page-button.active {
+.PageButton.Active {
   background-color: var(--bg2);
 }

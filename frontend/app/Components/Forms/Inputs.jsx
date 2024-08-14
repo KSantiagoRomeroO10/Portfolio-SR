@@ -2,14 +2,14 @@
 
 import './Inputs.css'
 
-import { useState } from 'react';
+import { useState } from 'react'
 
-const Inputs = ({ Type, Name, placeholder, value, NameLabel }) => {
-  const [valueInput, setValueInput] = useState(value || '');
+const Inputs = ({ Type, Name, Placeholder, Value, NameLabel }) => {
+  const [ValueInput, setValueInput] = useState(Value || '')
 
   const handleChange = (event) => {
-    setValueInput(event.target.value);
-  };
+    setValueInput(event.target.value)
+  }
 
   return (
     <>
@@ -19,13 +19,13 @@ const Inputs = ({ Type, Name, placeholder, value, NameLabel }) => {
       <input
         type={Type}
         name={Name ?? Type}
-        placeholder={placeholder ?? ''}
+        placeholder={Placeholder ?? ''}
         id={Name ?? Type}
-        value={Type === 'button' ? value : valueInput}
+        value={Type === 'button' ? Value : ValueInput}
         onChange={handleChange}
       />
     </>
-  );
-};
+  )
+}
 
-export default Inputs;
+export default Inputs

@@ -1,4 +1,4 @@
-import './singup.css'
+import Styles from './Singup.module.css'
 
 import Form from '../Components/Forms/Form'
 import Info from '../Components/Forms/Info'
@@ -13,48 +13,49 @@ export const metadata = {
 const Singup = () => {
 
   const InputsProps = [
-    { type: 'email', placeholder: 'Email', nameLabel: 'Email:' },
-    { type: 'text', name: 'username', placeholder: 'Username', nameLabel: 'Username:' },
-    { type: 'password', placeholder: 'Password', nameLabel: 'Password:' },
-    { type: 'password', name: 'verifyPassword', placeholder: 'Verify Password', nameLabel: 'Verify Password:' },
-    { type: 'button', name: 'singup', value: 'Singup'}
+    { Type: 'email', Placeholder: 'Email', NameLabel: 'Email:' },
+    { Type: 'text', Name: 'username', Placeholder: 'Username', NameLabel: 'Username:' },
+    { Type: 'password', Placeholder: 'Password', NameLabel: 'Password:' },
+    { Type: 'password', Name: 'verifyPassword', Placeholder: 'Verify Password', NameLabel: 'Verify Password:' },
+    { Type: 'button', Name: 'singup', Value: 'Singup'}
   ]
 
   const Buttons = [
-    { text: 'Google', preText:'Singup with: ' },
-    { text: 'Facebook', preText:'Singup with: ' },
-    { text: 'Github', preText:'Singup with: ' },
-    { text: 'Microsoft', preText:'Singup with: ' },
+    { Text: 'Google', PreText:'Singup with: ' },
+    { Text: 'Facebook', PreText:'Singup with: ' },
+    { Text: 'Github', PreText:'Singup with: ' },
+    { Text: 'Microsoft', PreText:'Singup with: ' },
   ]
   
   return(
-    <div className='Singup'>
+    <div className={Styles.Singup}>
       <Form
-        title={'Singup'}
-        inputs={
-        InputsProps.map((input, index) => (
-          <Inputs 
-            type={ input.type }
-            name={ input.name }
-            placeholder={ input.placeholder }
-            value={ input.value }
-            nameLabel={input.nameLabel}
-            key={index}
-          />
-        ))
-      }
+        Title={'Singup'}
+        Inputs={
+          InputsProps.map((Input, index) => (
+            <Inputs 
+              Type={ Input.Type }
+              Name={ Input.Name }
+              Placeholder={ Input.Placeholder }
+              Value={ Input.Value }
+              NameLabel={Input.NameLabel}
+              key={index}
+            />
+          ))
+        }
+        Option={'Login'}
       />
-      <Info h1='Welcome!' info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
+      <Info H1='Welcome!' Info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
       fusce sollicitudin cras et felis, inceptos ligula quam vitae in aliquet. Congue nostra torquent blandit habitant 
       lobortis litora, curabitur pretium turpis natoque praesent leo, habitasse ut nec at eros. Justo fusce lacinia montes 
       donec nunc phasellus laoreet, sed cubilia erat magnis vehicula maecenas ad euismod, suscipit malesuada dictum dis 
       duis feugiat.' 
-      buttons={ 
-        Buttons.map((button, index) => (
+      Buttons={ 
+        Buttons.map((Button, Index) => (
           <Button2 
-            text={button.text} 
-            preText={button.preText} 
-            key={index}
+            Text={Button.Text} 
+            PreText={Button.PreText} 
+            key={Index}
           />
         ))
       }/>

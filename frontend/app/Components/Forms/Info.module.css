@@ -1,4 +1,4 @@
-.information{
+.Information{
   background: var(--bg2);
   padding: 25px;
   background: var(--bg2);
@@ -8,6 +8,6 @@
   place-items: center; 
 }
 
-.info{
+.Info{
   grid-column: 1/3;
 }

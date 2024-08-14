@@ -1,54 +1,55 @@
 'use client'
-import './Section.css'
+import Styles from './Section.module.css'
 
 import { useState } from 'react'
 
 const Section = ({ Sections }) => {
-  const [CurrentPage, setCurrentPage] = useState(1)
+  const [CurrentPage, SetCurrentPage] = useState(1)
 
-  const academyHistory = Sections.map((section) => {
-    if (Array.isArray(section.Text)) {
-      return section.Text.map((academic) => (
-        <div key={academic.Title}>
-          <h3>{academic.Title}</h3>
+  const AcademyHistory = Sections.map((Section) => {
+    if (Array.isArray(Section.Text)) {
+      return Section.Text.map((Academic) => (
+        <div key={Academic.Title}>
+          <h3>{Academic.Title}</h3>
           <br />
-          <p>- {academic.Date}</p>
+          <p>- {Academic.Date}</p>
           <br />
         </div>
       ))
-    } else {
+    }
+    else {
       return null
     }
   })
   
   return (
-    <section className="paginated-div">
-      <div className="pagination">
-        {Sections.map((section) => (
+    <section>
+      <div className={Styles.Pagination}>
+        {Sections.map((Section) => (
           <button
-            key={section.Id}
-            className={`page-button ${section.Id === CurrentPage ? 'active' : ''}`}
-            onClick={() => setCurrentPage(section.Id)}
+            key={Section.Id}
+            className={`${Styles.PageButton} ${Section.Id === CurrentPage ? Styles.Active : ''}`}
+            onClick={() => SetCurrentPage(Section.Id)}
           >
-            {section.Id}
+            {Section.Id}
           </button>
         ))}
       </div>
 
-      <div className="urrentt">
-        {Sections.map((section) => (
+      <div>
+        {Sections.map((Section) => (
           <div
-            key={section.Id}
-            className={`page ${section.Id === CurrentPage ? 'active' : ''}`}
+            key={Section.Id}
+            className={`${Styles.Page} ${Section.Id === CurrentPage ? Styles.Active : ''}`}
           >
-            <h2 className="tituloSections">{section.Title}</h2>
+            <h2 className={Styles.TituloSections}>{Section.Title}</h2>
             <br />
             <br />
             <div>
-              {!Array.isArray(section.Text) ? (
-                <p>{section.Text}</p>
+              {!Array.isArray(Section.Text) ? (
+                <p>{Section.Text}</p>
               ) : (
-                academyHistory
+                AcademyHistory
               )}
             </div>
           </div>

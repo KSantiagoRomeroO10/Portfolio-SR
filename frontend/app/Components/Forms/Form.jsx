@@ -1,15 +1,22 @@
-import './Form.css';
+'use client'
+import Styles from './Form.module.css'
 
-const Form = ({ title, inputs }) => {
+import { useRouter } from 'next/navigation'
+
+const Form = ({ Title, Inputs, Option }) => {
+  const router = useRouter()
   return (
-    <form className="form">
-      <h1>{title}</h1>
+    <form className={Styles.Form}>
+      <h1 className={Styles.H1}>{Title}</h1>
       <br />
       <hr />
       <br />
-      {inputs}
+      {Inputs}
+      <br />
+      {Option ? <p className={Styles.Option} onClick={() => router.push(`/${Option}`)}>{Option}</p> : ''}
+      
     </form>
-  );
-};
+  )
+}
 
-export default Form;
+export default Form

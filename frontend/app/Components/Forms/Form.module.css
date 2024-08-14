@@ -1,15 +1,22 @@
 /* @import '../../app/general.scss'; */
 
-h1{
+.H1{
   text-align: center;
 }
 
-.form{
+.Form{
   background: var(--bg2);
   padding: 25px;
   text-align: center;
 }
 
-.form label{
+.Form label{
   text-align: start;
+}
+
+.Option{
+  border-bottom: solid 1px white;
+  margin: 15px auto 0 auto;
+  width: 20%;
+  cursor: pointer;
 }

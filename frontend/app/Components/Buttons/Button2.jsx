@@ -1,12 +1,11 @@
-import './Button2.css';
+import Styles from './Button2.module.css';
 
-
-const Button2 = ({ text, preText }) => {
+const Button2 = ({ Text, PreText }) => {
   return (
-    <div className="conection">
+    <div className={Styles.Conection}>
       <br />
-      <p className="preText">{preText}</p>
-      <p className="button2">{text}</p>
+      <p className={Styles.PreText}>{PreText}</p>
+      <p className={Styles.Button2}>{Text}</p>
     </div>
   );
 };

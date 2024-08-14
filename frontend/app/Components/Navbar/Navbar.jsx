@@ -1,8 +1,8 @@
-import './Navbar.css'
+import Styles from './Navbar.module.css'
 
 const Navbar = ({ buttons }) => {
   return (
-    <nav className="navbar">
+    <nav className={Styles.Navbar}>
       {buttons}
     </nav>
   )

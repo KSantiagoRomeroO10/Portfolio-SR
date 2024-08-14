@@ -1,9 +1,9 @@
-import './TextContent2.css'
+import Styles from './TextContent2.module.css'
 
-const TextContent2 = ({ section }) => {
+const TextContent2 = ({ Section }) => {
   return (
-    <article className='TextContent2 adaptation'>
-      {section}
+    <article className={Styles.TextContent2}>
+      {Section}
     </article>
   )
 }
