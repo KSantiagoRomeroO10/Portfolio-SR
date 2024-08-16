@@ -41,6 +41,7 @@ const Login = () => {
               Placeholder={ Input.Placeholder }
               Value={ Input.Value }
               NameLabel={Input.NameLabel}
+              Validation={false}
               key={Index}
             />
           ))

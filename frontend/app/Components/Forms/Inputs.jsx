@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react'
 import Validate from './Validations/Validate'
 import Input from './Validations/Input'
 
-const Inputs = ({ Type, Name, Placeholder, Value, NameLabel, Validation = false }) => {
+const Inputs = ({ Type, Name, Placeholder, Value, NameLabel, Validation = true }) => {
   const [ValueInput, SetValueInput] = useState(Value || '')
   const [Result, SetResult] = useState(true)
 
