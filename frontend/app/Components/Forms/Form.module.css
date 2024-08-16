@@ -8,6 +8,7 @@
   background: var(--bg2);
   padding: 25px;
   text-align: center;
+  width: 20vw;
 }
 
 .Form label{

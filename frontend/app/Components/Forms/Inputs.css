@@ -23,3 +23,7 @@ input[type="button"]:hover {
 label{
   margin: 5px;
 }
+
+.Red{
+  color: var(--red);
+}

@@ -13,8 +13,8 @@ export const metadata = {
 const Login = () => {
 
   const InputsProps = [
-    { Type: 'text', Name: 'Nombre de usuario', Placeholder: 'Nombre de usuario', NameLabel: 'Nombre de usuario:'  },
-    { Type: 'password', Placeholder: 'Contraseña', NameLabel: 'Contraseña:'  },
+    { Type: 'text', Name: 'Username', Placeholder: 'Nombre de usuario', NameLabel: 'Nombre de usuario:'  },
+    { Type: 'password', Name: 'Password', Placeholder: 'Contraseña', NameLabel: 'Contraseña:'  },
     { Type: 'button', Value: 'Iniciar Sesión'}
   ]
 
@@ -47,7 +47,7 @@ const Login = () => {
         }
         Option={Option}
       />
-      <Info H1='¡funciones nuevas!' Info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
+      <Info H1='¡Funciones nuevas!' Info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
       fusce sollicitudin cras et felis, inceptos ligula quam vitae in aliquet. Congue nostra torquent blandit habitant 
       lobortis litora, curabitur pretium turpis natoque praesent leo, habitasse ut nec at eros. Justo fusce lacinia montes 
       donec nunc phasellus laoreet, sed cubilia erat magnis vehicula maecenas ad euismod, suscipit malesuada dictum dis 

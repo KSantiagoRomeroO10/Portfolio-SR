@@ -13,11 +13,11 @@ export const metadata = {
 const Singup = () => {
 
   const InputsProps = [
-    { Type: 'email', Placeholder: 'Correo', NameLabel: 'Correo:' },
-    { Type: 'text', Name: 'Nombre de usuario', Placeholder: 'Nombre de usuario', NameLabel: 'Nombre de usuario:' },
-    { Type: 'password', Placeholder: 'Contraseña', NameLabel: 'Contraseña:' },
-    { Type: 'password', Name: 'verifyPassword', Placeholder: 'Verificar contraseña', NameLabel: 'Verificar contraseña:' },
-    { Type: 'button', Name: 'singup', Value: 'Registrarse'}
+    { Type: 'email', Name: 'Email', Placeholder: 'Correo', NameLabel: 'Correo:' },
+    { Type: 'text', Name: 'Username', Placeholder: 'Nombre de usuario', NameLabel: 'Nombre de usuario:' },
+    { Type: 'password', Name: 'Password', Placeholder: 'Contraseña', NameLabel: 'Contraseña:' },
+    { Type: 'password', Name: 'VerifyPassword', Placeholder: 'Verificar contraseña', NameLabel: 'Verificar contraseña:' },
+    { Type: 'button', Name: 'Singup', Value: 'Registrarse'}
   ]
 
   const Option = {

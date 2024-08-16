@@ -2,19 +2,34 @@
 
 import './Inputs.css'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-const Inputs = ({ Type, Name, Placeholder, Value, NameLabel }) => {
-  const [ValueInput, setValueInput] = useState(Value || '')
+import Validate from './Validations/Validate'
+import Input from './Validations/Input'
+
+const Inputs = ({ Type, Name, Placeholder, Value, NameLabel, Validation = false }) => {
+  const [ValueInput, SetValueInput] = useState(Value || '')
+  const [Result, SetResult] = useState(true)
+
+  const [ListenerChange, SetListenerChange] = useState(false)
 
   const handleChange = (event) => {
-    setValueInput(event.target.value)
+    SetValueInput(event.target.value)
+    SetListenerChange(true)
   }
+
+  const { Error, Rules } = Input(Name)
+
+  useEffect(() => { 
+    if(ListenerChange && Validation){
+      SetResult(Validate(ValueInput, Rules))
+    }
+  }, [ValueInput, ListenerChange])
 
   return (
     <>
       <label htmlFor={Name ?? Type}>
-        <p>{NameLabel ?? ''}</p>
+        <p className={Result ? '' : 'Red'}>{Result ? NameLabel : Error}</p>
       </label>
       <input
         type={Type}
