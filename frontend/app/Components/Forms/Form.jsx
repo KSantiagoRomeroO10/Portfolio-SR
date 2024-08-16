@@ -13,8 +13,7 @@ const Form = ({ Title, Inputs, Option }) => {
       <br />
       {Inputs}
       <br />
-      {Option ? <p className={Styles.Option} onClick={() => router.push(`/${Option}`)}>{Option}</p> : ''}
-      
+      {Option ? <p className={Styles.Option} onClick={() => router.push(`/${Option.Route}`)}>{Option.Value}</p> : ''}
     </form>
   )
 }

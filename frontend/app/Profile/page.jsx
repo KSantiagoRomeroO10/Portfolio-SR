@@ -1,5 +1,7 @@
 'use client'
 
+import Styles from './Profile.module.css'
+
 import Navbar from '../Components/Navbar/Navbar'
 import Button1 from '../Components/Buttons/Button1'
 
@@ -9,10 +11,10 @@ const Profile = () => {
   const User = UseUserStore((state) => state.User)
 
   const Buttons = [
-    { Text: 'About', Route: 'About' },
-    { Text: 'Projects', Route: 'Projects' },
-    { Text: 'Learn', Route: 'Learn', StylesButton: 'Selected' },
-    { Text: `${User.Username}`, Route: 'Profile', StylesButton: 'Right' }
+    { Text: 'Sobre mi', Route: 'About' },
+    { Text: 'Proyectos', Route: 'Projects' },
+    { Text: 'Aprendizaje', Route: 'Learn' },
+    { Text: `${User.Username}`, Route: 'Profile', StylesButton: 'Right', StylesButton: 'SelectedRight'  }
   ]
 
   return(
@@ -27,11 +29,28 @@ const Profile = () => {
           />
         ))
       }/>
-      <h1>Datos del usuario</h1>
-      <p>Id: {User.Id}</p>
-      <p>Username: {User.Username}</p>
-      <p>Name: {User.Name}</p>
-      <p>Email: {User.Email}</p>
+      <h1 className={Styles.Welcome}>Bienvendido {User.Username}</h1>
+      <table className={Styles.Table}>
+        <thead>
+          <tr>
+            <th colSpan={2}>Información del usuario</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Username: </th>
+            <td>{User.Username}</td>
+          </tr>
+          <tr>
+            <th>Name: </th>
+            <td>{User.Name}</td>
+          </tr>
+          <tr>
+            <th>Email: </th>
+            <td>{User.Email}</td>
+          </tr>
+        </tbody>
+      </table>
     </>
   )
 }

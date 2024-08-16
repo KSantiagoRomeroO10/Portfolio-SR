@@ -13,24 +13,28 @@ export const metadata = {
 const Singup = () => {
 
   const InputsProps = [
-    { Type: 'email', Placeholder: 'Email', NameLabel: 'Email:' },
-    { Type: 'text', Name: 'username', Placeholder: 'Username', NameLabel: 'Username:' },
-    { Type: 'password', Placeholder: 'Password', NameLabel: 'Password:' },
-    { Type: 'password', Name: 'verifyPassword', Placeholder: 'Verify Password', NameLabel: 'Verify Password:' },
-    { Type: 'button', Name: 'singup', Value: 'Singup'}
+    { Type: 'email', Placeholder: 'Correo', NameLabel: 'Correo:' },
+    { Type: 'text', Name: 'Nombre de usuario', Placeholder: 'Nombre de usuario', NameLabel: 'Nombre de usuario:' },
+    { Type: 'password', Placeholder: 'Contraseña', NameLabel: 'Contraseña:' },
+    { Type: 'password', Name: 'verifyPassword', Placeholder: 'Verificar contraseña', NameLabel: 'Verificar contraseña:' },
+    { Type: 'button', Name: 'singup', Value: 'Registrarse'}
   ]
 
+  const Option = {
+    Value: 'Iniciar Sesión', Route: 'Login'
+  }
+
   const Buttons = [
-    { Text: 'Google', PreText:'Singup with: ' },
-    { Text: 'Facebook', PreText:'Singup with: ' },
-    { Text: 'Github', PreText:'Singup with: ' },
-    { Text: 'Microsoft', PreText:'Singup with: ' },
+    { Text: 'Google', PreText:'' },
+    { Text: 'Facebook', PreText:'' },
+    { Text: 'Github', PreText:'' },
+    { Text: 'Microsoft', PreText:'' },
   ]
   
   return(
     <div className={Styles.Singup}>
       <Form
-        Title={'Singup'}
+        Title={'Registrarse'}
         Inputs={
           InputsProps.map((Input, index) => (
             <Inputs 
@@ -43,9 +47,9 @@ const Singup = () => {
             />
           ))
         }
-        Option={'Login'}
+        Option={Option}
       />
-      <Info H1='Welcome!' Info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
+      <Info H1='¡Bienvenido!' Info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
       fusce sollicitudin cras et felis, inceptos ligula quam vitae in aliquet. Congue nostra torquent blandit habitant 
       lobortis litora, curabitur pretium turpis natoque praesent leo, habitasse ut nec at eros. Justo fusce lacinia montes 
       donec nunc phasellus laoreet, sed cubilia erat magnis vehicula maecenas ad euismod, suscipit malesuada dictum dis 

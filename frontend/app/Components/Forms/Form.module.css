@@ -17,6 +17,6 @@
 .Option{
   border-bottom: solid 1px white;
   margin: 15px auto 0 auto;
-  width: 20%;
   cursor: pointer;
+  max-width: max-content;
 }

@@ -28,5 +28,14 @@
 
 .Button1Selected:hover{
   border-top: var(--border-bottom);
+}
+
+.SelectedRight{
+  position: absolute;
+  right: 0;
+  cursor: pointer;
   border-bottom: var(--border-bottom);
+}
+.SelectedRight:hover{
+  border-top: var(--border-bottom);
 }

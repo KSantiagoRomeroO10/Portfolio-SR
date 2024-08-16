@@ -8,9 +8,9 @@ export const metadata = {
 const Projects = () => {
 
   const Buttons = [
-    { Text: 'About', Route: 'About' },
-    { Text: 'Projects', Route: 'Projects', StylesButton: 'Selected'  },
-    { Text: 'Learn', Route: 'Learn' },
+    { Text: 'Sobre mi', Route: 'About' },
+    { Text: 'Proyectos', Route: 'Projects', StylesButton: 'Selected'  },
+    { Text: 'Aprendizaje', Route: 'Learn' },
   ]
 
   return(

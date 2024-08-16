@@ -13,22 +13,26 @@ export const metadata = {
 const Login = () => {
 
   const InputsProps = [
-    { Type: 'text', Name: 'username', Placeholder: 'Username', NameLabel: 'Username:'  },
-    { Type: 'password', Placeholder: 'Password', NameLabel: 'Password:'  },
-    { Type: 'button', Value: 'Login'}
+    { Type: 'text', Name: 'Nombre de usuario', Placeholder: 'Nombre de usuario', NameLabel: 'Nombre de usuario:'  },
+    { Type: 'password', Placeholder: 'Contraseña', NameLabel: 'Contraseña:'  },
+    { Type: 'button', Value: 'Iniciar Sesión'}
   ]
 
+  const Option = {
+    Value: 'Registrarse', Route: 'Singup'
+  }
+
   const Buttons = [
-    { Text: 'Google', PreText:'Singup with: ' },
-    { Text: 'Facebook', PreText:'Singup with: ' },
-    { Text: 'Github', PreText:'Singup with: ' },
-    { Text: 'Microsoft', PreText:'Singup with: ' },
+    { Text: 'Google', PreText:'' },
+    { Text: 'Facebook', PreText:'' },
+    { Text: 'Github', PreText:'' },
+    { Text: 'Microsoft', PreText:'' },
   ]
   
   return(
     <div className={Styles.Login}>
       <Form
-        Title={'Login'}
+        Title={'Iniciar sesión'}
         Inputs={
           InputsProps.map((Input, Index) => (
             <Inputs 
@@ -41,9 +45,9 @@ const Login = () => {
             />
           ))
         }
-        Option={'Singup'}
+        Option={Option}
       />
-      <Info H1='News!' Info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
+      <Info H1='¡funciones nuevas!' Info='Enim class senectus scelerisque laoreet tempor libero leo, lacus ultrices nullam 
       fusce sollicitudin cras et felis, inceptos ligula quam vitae in aliquet. Congue nostra torquent blandit habitant 
       lobortis litora, curabitur pretium turpis natoque praesent leo, habitasse ut nec at eros. Justo fusce lacinia montes 
       donec nunc phasellus laoreet, sed cubilia erat magnis vehicula maecenas ad euismod, suscipit malesuada dictum dis 

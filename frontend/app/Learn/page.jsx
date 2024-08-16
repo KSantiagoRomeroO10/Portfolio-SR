@@ -10,12 +10,12 @@ const Learn = () => {
   const User = UseUserStore((state) => state.User)
 
   const Buttons = [
-    { Text: 'About', Route: 'About' },
-    { Text: 'Projects', Route: 'Projects' },
-    { Text: 'Learn', Route: 'Learn', StylesButton: 'Selected' },
+    { Text: 'Sobre mi', Route: 'About' },
+    { Text: 'Proyectos', Route: 'Projects' },
+    { Text: 'Aprendizaje', Route: 'Learn', StylesButton: 'Selected'},
   ]
-
-  if(!User || Object.values(User).every(Value => !Value)) Buttons.push({ Text: 'Login', Route: 'Login', StylesButton: 'Right' })
+  
+  if(!Object.values(User).every(Value => Value)) Buttons.push({ Text: 'Iniciar Sesión', Route: 'Login', StylesButton: 'Right' })
   else Buttons.push({ Text: `${User.Username}`, Route: 'Profile', StylesButton: 'Right' })
 
   return (

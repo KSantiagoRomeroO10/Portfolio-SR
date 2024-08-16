@@ -1,0 +1,25 @@
+.Welcome{
+  text-align: center;
+  margin: 50px;
+}
+
+.Table{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: var(--red) solid 2px;
+  border-radius: 5px;
+  background: var(--bg2);
+  padding: 40px 40px 40px 25px;
+}
+
+.Table th{
+  text-align: left;
+  padding: 3px 30px;
+}
+
+.Table thead tr th {
+  text-align: center;
+  padding: 0 0 35px 0;
+}
