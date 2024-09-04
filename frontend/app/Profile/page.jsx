@@ -13,7 +13,6 @@ const Profile = () => {
   const Buttons = [
     { Text: 'Sobre mi', Route: 'About' },
     { Text: 'Proyectos', Route: 'Projects' },
-    { Text: 'Aprendizaje', Route: 'Learn' },
     { Text: `${User.Username}`, Route: 'Profile', StylesButton: 'Right', StylesButton: 'SelectedRight'  }
   ]
 

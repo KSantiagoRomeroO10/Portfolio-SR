@@ -1,0 +1,27 @@
+.Back{
+  width: 25px;
+  height: 25px;
+  background: var(--red);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.Container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  background: var(--bg2);
+  border: solid var(--red) 2px;
+  border-radius: 5px;
+  width: 60vw;
+  height: 60vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

@@ -25,7 +25,7 @@ const Sections = [
   {
     Id: 3,
     Title: "Perfil profesional",
-    Text: "Estudiante de ingeniería de sistemas de 9 semestre, dispuesto a aprender todos los días algo nuevo, y sobre todo en la programación. Soy una persona responsable, adaptable al cambio, honesta, comprometida, con mucha facilidad para aprender y afrontar retos."
+    Text: "Estudiante de ingeniería de sistemas de 10 semestre, dispuesto a aprender todos los días algo nuevo, y sobre todo en la programación. Soy una persona responsable, adaptable al cambio, honesta, comprometida, con mucha facilidad para aprender y afrontar retos."
   },
   {
     Id: 4,

@@ -1,0 +1,15 @@
+.Item{
+  max-width: 80vw;
+  background-color: var(--bg2);
+  margin: 50px auto;
+  padding: 25px;
+  border: var(--red) solid 2px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.Technologies{
+  grid-column: 5;
+}

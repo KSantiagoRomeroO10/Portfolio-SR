@@ -1,4 +1,4 @@
-import Styles from './Button2.module.css';
+import Styles from './Button2.module.css'
 
 const Button2 = ({ Text, PreText }) => {
   return (
@@ -7,7 +7,7 @@ const Button2 = ({ Text, PreText }) => {
       <p className={Styles.PreText}>{PreText}</p>
       <p className={Styles.Button2}>{Text}</p>
     </div>
-  );
-};
+  )
+}
 
-export default Button2;
+export default Button2
