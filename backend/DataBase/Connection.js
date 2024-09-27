@@ -6,33 +6,39 @@ const CollProjects = process.env.CollProjects
 const CollInfoPersonal = process.env.CollInfoPersonal
 const CollInfoCV = process.env.CollInfoCV
 
-const Connection = async () =>{
-  const Client = new MongoClient(URLConn)
+const CreateCollections = require('./CreateCollections')
 
-  try {
-    await Client.connect()
-    const DB = Client.db(DBName)
+let Client = new MongoClient(URLConn)
 
-    const Collections = await DB.listCollections().toArray()
+const Connection = async () => {
 
-    const ProjectsExist = Collections.some(Coll => Coll.name === CollProjects)
-    const InfoPersonalExist = Collections.some(Coll => Coll.name === CollInfoPersonal)
-    const InfoCVExist = Collections.some(Coll => Coll.name === CollInfoCV)
-
-    if(!ProjectsExist || !InfoPersonalExist || !InfoCVExist){ 
-      await DB.createCollection(CollProjects)
-      await DB.createCollection(CollInfoPersonal)
-      await DB.createCollection(CollInfoCV)
-    }
+  console.log('-'.repeat(60))
+  console.log('Base de datos')  
+  console.log()
     
-    console.log('Base de datos establecida')    
-  } 
-  catch (error) {
-    console.log(`Error al conetar: ${error.message}`)    
-  }
-  finally{
-    await Client.close()
+  await Client.connect()
+  const DB = Client.db(DBName)
+
+  const CollectionsToCheck = [
+    { name: CollProjects },
+    { name: CollInfoPersonal },
+    { name: CollInfoCV }
+  ]
+
+  await CreateCollections(DB, CollectionsToCheck)
+  
+  console.log()
+  console.log('Base de datos establecida')
+  console.log()
+  console.log('-'.repeat(60))    
+    
+}
+
+const CloseConnection = async () => {
+  if(Client){
+    await Client.close()    
+    Client = null 
   }
 }
 
-module.exports = Connection
+module.exports = { Connection, CloseConnection }

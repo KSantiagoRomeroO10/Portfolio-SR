@@ -19,13 +19,13 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 const Express = require('express')
-const Connection = require('./DataBase/Connection')
+const Index = require('./DataBase/Index')
 
 const Server = Express()
 
-const Port = 3000
+const Port = 3001
 
 Server.listen(Port, async () => {
-  await Connection()
+  await Index()
   console.log(`Server on ${Port}`)
 })
