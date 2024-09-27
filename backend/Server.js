@@ -27,5 +27,11 @@ const Port = 3001
 
 Server.listen(Port, async () => {
   await Index()
-  console.log(`Server on ${Port}`)
+  console.log('-'.repeat(60))
+  console.log('Servidor')  
+
+  console.log()
+  console.log(`Servidor en el puerto: ${Port}.`)
+  console.log()
+  console.log('-'.repeat(60))
 })
