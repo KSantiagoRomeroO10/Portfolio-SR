@@ -20,10 +20,17 @@
 
 const Express = require('express')
 const Index = require('./DataBase/Index')
+const router = require('./Routes/InfoPersonalRoute/Index')
 
 const Server = Express()
 
 const Port = 3001
+
+// Middleware
+Server.use(Express.json())
+
+// Rutas
+Server.use(router)
 
 Server.listen(Port, async () => {
   await Index()

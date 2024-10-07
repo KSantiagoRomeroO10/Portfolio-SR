@@ -1,9 +1,18 @@
+const { Connection } = require('../DataBase/Connection')
+
 class GenericModel{
 
-  constructor(Collection, Fields){
-    this.Collection = Collection
-    this.RequiredFields = Fields
-    this.NameCollection = Collection.s.namespace.collection    
+  async ConnectionGeneric(NameCollection, Keys){   
+    try {
+      const DB = await Connection()      
+      this.Collection = DB.collection(`${NameCollection}`)
+      this.RequiredFields = Keys
+      this.NameCollection = this.Collection.s.namespace.collection
+      return DB
+    } 
+    catch (error) {     
+      throw new Error(`Message ConnectionGeneric, ${error.message}.`)
+    }
   }
 
   ValidationStructureBasic(Data) {
@@ -33,14 +42,19 @@ class GenericModel{
 
   }
 
-  async Create(NewData) {
-    if(this.ValidationStructureBasic(NewData)){
-      const Insert = await this.Collection.insertOne(NewData)
-      console.log(Insert.insertedId)
+  async CreateGeneric(NewData) {
+    try {
+      if(this.ValidationStructureBasic(NewData)){
+        const Insert = await this.Collection.insertOne(NewData)
+        return Insert.insertedId
+      } 
+    } 
+    catch (error) {
+      throw new Error(`Error en CreateGeneric, ${error.message}`)
     }
   }
   
-  async Read(Filtro = {}) {
+  async ReadGeneric(Filtro = {}) {
     if(Object.keys(Filtro).length > 0 && !this.ValidationSpecific(Filtro)){
       throw new Error(`Los filtros ${Object.keys(Filtro).join(' ')} no son validos para buscar.`)
     }
@@ -52,7 +66,7 @@ class GenericModel{
     return Documentos
   }
   
-  async UpdateOne(Filtro, DateUpdate) {
+  async UpdateOneGeneric(Filtro, DateUpdate) {
     if(this.ValidationSpecific(Filtro) && this.ValidationSpecific(DateUpdate)){
       const Result = await this.Collection.updateOne(Filtro, { $set: DateUpdate })
       console.log('Documento actualizado: ', Result.modifiedCount)
@@ -62,7 +76,7 @@ class GenericModel{
     }
   }
   
-  async UpdateMany(Filtro, DateUpdate) {
+  async UpdateManyGeneric(Filtro, DateUpdate) {
     if(this.ValidationSpecific(Filtro) && this.ValidationSpecific(DateUpdate)){
       const Result = await this.Collection.updateMany(Filtro, { $set: DateUpdate })
       console.log('Documentos actualizados: ', Result.modifiedCount)
@@ -72,7 +86,7 @@ class GenericModel{
     }
   }
   
-  async DeleteOne(Filtro) {
+  async DeleteOneGeneric(Filtro) {
     if(this.ValidationSpecific(Filtro)){
       const Result = await this.Collection.deleteOne(Filtro)
       console.log('Documento Eliminado: ', Result.deletedCount)
@@ -82,7 +96,7 @@ class GenericModel{
     }
   }
   
-  async DeleteMany(Filtro) {
+  async DeleteManyGeneric(Filtro) {
     if(this.ValidationSpecific(Filtro)){
       const Result = await this.Collection.deleteMany(Filtro)  
       if(Result.deletedCount > 0){
